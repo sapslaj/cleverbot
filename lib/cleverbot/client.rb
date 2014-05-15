@@ -38,7 +38,18 @@ module Cleverbot
     base_uri 'http://www.cleverbot.com'
 
     parser Parser
-    headers 'Accept-Encoding' => 'gzip'
+    HEADERS = {
+      'Accept-Encoding' => 'gzip',
+      'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:29.0) Gecko/20100101 Firefox/29.0',
+      'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language' => 'fr-fr,fr;q=0.8,en-us;q=0.5,en;q=0.3',
+      'X-Moz' => 'prefetch',
+      'Accept-Charset' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.7',
+      'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+      'Referer' => 'http://www.cleverbot.com',
+      'Cache-Control' => 'no-cache, no-cache',
+      'Pragma' => 'no-cache'
+    }
 
     # Holds the parameters for an instantiated Client.
     attr_reader :params
@@ -63,7 +74,7 @@ module Cleverbot
       body['stimulus'] = message
       body['icognocheck'] = digest HashConversions.to_params(body)
 
-      post(PATH, :body => body).parsed_response
+      post(PATH, :body => body, :headers => HEADERS).parsed_response
     end
 
     # Initializes a Client with given parameters.
