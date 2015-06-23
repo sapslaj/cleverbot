@@ -62,7 +62,7 @@ module Cleverbot
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
     def self.write message='', params={}
       client = self.new(params)
-      client.write message
+      {:message => client.write(message), :sessionid => client.params[:sessionid]}
     end
 
     # Initializes a Client with given parameters.
