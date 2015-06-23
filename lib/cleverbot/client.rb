@@ -61,11 +61,8 @@ module Cleverbot
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
     def self.write message='', params={}
-      body = DEFAULT_PARAMS.merge params
-      body['stimulus'] = message
-      body['icognocheck'] = digest HashConversions.to_params(body)
-
-      post(PATH, :body => body).parsed_response
+      client = self.class.new params
+      client.write message
     end
 
     # Initializes a Client with given parameters.
@@ -75,6 +72,9 @@ module Cleverbot
     # [<tt>params</tt>] Optional <tt>Hash</tt> holding the initial parameters. Defaults to <tt>{}</tt>.
     def initialize params={}
       @params = params
+      @cookies = {}
+
+      set_cookies
     end
 
     # Sends a message and returns a <tt>String</tt> with the message received. Updates #params to maintain state.
@@ -83,12 +83,34 @@ module Cleverbot
     #
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
     def write message=''
-      response = self.class.write message, @params
-      message = response['message']
-      response.keep_if { |key, value| DEFAULT_PARAMS.keys.include? key }
-      @params.merge! response
+      cookie_string = @cookies.map{|(k, v)| "#{k}=#{v}"}.join(";")
+
+      body = DEFAULT_PARAMS.merge @params
+      body['stimulus'] = message
+      body['icognocheck'] = self.class.digest HashConversions.to_params(body)
+
+      response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
+
+      set_cookies(response)
+
+      parsed_response = response.parsed_response
+
+      message = parsed_response['message']
+      parsed_response.keep_if { |key, value| DEFAULT_PARAMS.keys.include? key }
+      @params.merge! parsed_response
       @params.delete_if { |key, value| DEFAULT_PARAMS[key] == value }
       message
+    end
+
+    private
+
+    # Gets
+    def set_cookies(response=nil)
+      response ||= self.class.get("/")
+      response.headers['set-cookie'].split(";").each do |cookie|
+        k, v = cookie.split("=")
+        @cookies[k] = v
+      end
     end
   end
 end
