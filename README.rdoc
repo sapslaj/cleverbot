@@ -1,4 +1,9 @@
-= cleverbot {<img src="https://secure.travis-ci.org/benmanns/cleverbot.png" />}[http://travis-ci.org/benmanns/cleverbot]
+= cleverbot
+ === Source repo
+ {<img src="https://secure.travis-ci.org/benmanns/cleverbot.png" />}[http://travis-ci.org/benmanns/cleverbot]
+
+ === This repo
+ {<img src="https://secure.travis-ci.org/sapslaj/cleverbot.png" />}[http://travis-ci.org/sapslaj/cleverbot]
 
 Ruby wrapper for Cleverbot.
 
