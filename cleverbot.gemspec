@@ -16,60 +16,18 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc"
   ]
-  s.files = [
-    ".document",
-    ".rspec",
-    ".rvmrc",
-    ".travis.yml",
-    "Gemfile",
-    "Gemfile.lock",
-    "LICENSE.txt",
-    "README.rdoc",
-    "Rakefile",
-    "VERSION",
-    "cleverbot.gemspec",
-    "lib/cleverbot.rb",
-    "lib/cleverbot/client.rb",
-    "lib/cleverbot/parser.rb",
-    "spec/cleverbot/client_spec.rb",
-    "spec/cleverbot/parser_spec.rb",
-    "spec/cleverbot_spec.rb",
-    "spec/spec_helper.rb"
-  ]
+  s.files = `git ls-files -z`.split("\x0")
   s.homepage = "https://github.com/benmanns/cleverbot"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.6"
-  s.summary = "Ruby wrapper for Cleverbot."
+  s.summary = s.description
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
+  s.add_dependency "httparty", ["< 1.0", ">= 0.8.1"]
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<httparty>, ["< 1.0", ">= 0.8.1"])
-      s.add_development_dependency(%q<bundler>, [">= 0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.7"])
-      s.add_development_dependency(%q<git>, ["< 1.2.6", ">= 1.0.1"])
-      s.add_development_dependency(%q<simplecov>, ["~> 0.7.1"])
-      s.add_development_dependency(%q<rdoc>, ["~> 4.0.1"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.14.1"])
-    else
-      s.add_dependency(%q<httparty>, ["< 1.0", ">= 0.8.1"])
-      s.add_dependency(%q<bundler>, [">= 0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.7"])
-      s.add_dependency(%q<git>, ["< 1.2.6", ">= 1.0.1"])
-      s.add_dependency(%q<simplecov>, ["~> 0.7.1"])
-      s.add_dependency(%q<rdoc>, ["~> 4.0.1"])
-      s.add_dependency(%q<rspec>, ["~> 2.14.1"])
-    end
-  else
-    s.add_dependency(%q<httparty>, ["< 1.0", ">= 0.8.1"])
-    s.add_dependency(%q<bundler>, [">= 0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.7"])
-    s.add_dependency(%q<git>, ["< 1.2.6", ">= 1.0.1"])
-    s.add_dependency(%q<simplecov>, ["~> 0.7.1"])
-    s.add_dependency(%q<rdoc>, ["~> 4.0.1"])
-    s.add_dependency(%q<rspec>, ["~> 2.14.1"])
-  end
+  s.add_development_dependency "bundler"
+  s.add_development_dependency "pry"
+  s.add_development_dependency "rake"
+  s.add_development_dependency "rdoc"
+  s.add_development_dependency "rspec"
 end
-
