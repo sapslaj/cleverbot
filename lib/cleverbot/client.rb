@@ -61,7 +61,7 @@ module Cleverbot
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
     def self.write message='', params={}
-      client = self.class.new params
+      client = self.new(params)
       client.write message
     end
 
