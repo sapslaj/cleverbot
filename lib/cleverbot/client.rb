@@ -104,7 +104,7 @@ module Cleverbot
 
     private
 
-    # Gets
+    # Gets cookies needed to interact with new Jabberwocky server.
     def set_cookies(response=nil)
       response ||= self.class.get("/")
       response.headers['set-cookie'].split(";").each do |cookie|
