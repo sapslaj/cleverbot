@@ -80,14 +80,6 @@ describe Cleverbot::Client do
             subject
           end
         end
-
-        context 'when the parsed response is {}' do
-          before :each do
-            Cleverbot::Client.stub(:post).and_return double(:parsed_response => {})
-          end
-
-          it { should == {} }
-        end
       end
     end
   end
