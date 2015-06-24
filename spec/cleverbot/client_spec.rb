@@ -3,7 +3,9 @@ require File.expand_path(File.join(File.dirname(__FILE__), '..', 'spec_helper'))
 describe Cleverbot::Client do
   subject { Cleverbot::Client }
 
-  it { should <= HTTParty }
+  it 'should include HTTParty' do |variable|
+    should <= HTTParty
+  end
 
   describe '::DEFAULT_PARAMS' do
     subject { Cleverbot::Client::DEFAULT_PARAMS }
