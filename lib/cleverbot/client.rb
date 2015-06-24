@@ -56,7 +56,7 @@ module Cleverbot
     #
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
-    def self.write message='', params={}
+    def self.write(message = '', params = {})
       client = self.new(params)
       {:message => client.write(message)}.merge! client.params
     end
@@ -66,7 +66,7 @@ module Cleverbot
     # ==== Parameters
     #
     # [<tt>params</tt>] Optional <tt>Hash</tt> holding the initial parameters. Defaults to <tt>{}</tt>.
-    def initialize params={}
+    def initialize(params = {})
       @params = Hashie::Mash.new(params)
       @cookies = {}
 
@@ -78,7 +78,7 @@ module Cleverbot
     # ==== Parameters
     #
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
-    def write message=''
+    def write(message = '')
       cookie_string = @cookies.map{|(k, v)| "#{k}=#{v}"}.join(";")
 
       body = DEFAULT_PARAMS.merge @params
@@ -114,7 +114,7 @@ module Cleverbot
     # ==== Parameters
     #
     # [<tt>body</tt>] <tt>String</tt> to be digested.
-    def digest body
+    def digest(body)
       Digest::MD5.hexdigest body[9...35]
     end
   end
