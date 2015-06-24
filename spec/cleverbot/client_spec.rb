@@ -1,13 +1,11 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'spec_helper'))
 
 describe Cleverbot::Client do
-  subject { Cleverbot::Client }
+  it 'should include HTTParty' do
+    should <= HTTParty
+  end
 
-  it { should <= HTTParty }
-
-  describe '::DEFAULT_PARAMS' do
-    subject { Cleverbot::Client::DEFAULT_PARAMS }
-
+  describe Cleverbot::Client::DEFAULT_PARAMS do
     it do
       should == {
         'stimulus' => '',
@@ -28,21 +26,15 @@ describe Cleverbot::Client do
     end
   end
 
-  describe '::PATH' do
-    subject { Cleverbot::Client::PATH }
-
+  describe Cleverbot::Client::PATH do
     it { should == '/webservicemin' }
   end
 
-  describe '.base_uri' do
-    subject { Cleverbot::Client.base_uri }
-
+  describe Cleverbot::Client.base_uri do
     it { should == 'http://www.cleverbot.com' }
   end
 
-  describe '.parser' do
-    subject { Cleverbot::Client.parser }
-
+  describe Cleverbot::Client.parser do
     it { should == Cleverbot::Parser }
   end
 
@@ -142,7 +134,7 @@ describe Cleverbot::Client do
       Cleverbot::Client::DEFAULT_PARAMS.each do |key, value|
         next if ['stimulus', 'icognocheck'].include? key
 
-        # hash_including seems to be broken. Skip test until further notice. 
+        # hash_including seems to be broken. Skip test until further notice.
         xit "should add #{key} => #{value.inspect} to the post body" do
           Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including(key => value)).and_return double(:parsed_response => {})
           subject
