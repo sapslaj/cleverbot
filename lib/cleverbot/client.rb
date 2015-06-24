@@ -58,7 +58,7 @@ module Cleverbot
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
     def self.write(message = '', params = {})
       client = self.new(params)
-      {:message => client.write(message)}.merge! client.params
+      Hashie::Mash.new(:message => client.write(message)).merge client.params
     end
 
     # Initializes a Client with given parameters.
