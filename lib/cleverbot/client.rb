@@ -1,4 +1,5 @@
 require 'cleverbot/parser'
+require 'hashie'
 
 module Cleverbot
   # Ruby wrapper for Cleverbot.com.
@@ -66,7 +67,7 @@ module Cleverbot
     #
     # [<tt>params</tt>] Optional <tt>Hash</tt> holding the initial parameters. Defaults to <tt>{}</tt>.
     def initialize params={}
-      @params = params
+      @params = Hashie::Mash.new(params)
       @cookies = {}
 
       set_cookies
@@ -115,25 +116,6 @@ module Cleverbot
     # [<tt>body</tt>] <tt>String</tt> to be digested.
     def digest body
       Digest::MD5.hexdigest body[9...35]
-    end
-
-    # Changes keys in hash to symbols
-    def symbolize_keys hash
-      transform_keys(hash) { |k| k.to_sym }
-    end
-
-    # Changes keys in hash to strings
-    def stringify_keys hash
-      transform_keys(hash) { |k| k.to_s }
-    end
-
-    # General purpose hash key transformation factory
-    def transform_keys hash
-      transformed_hash = {}
-      hash.each_pair do |key, value|
-        transformed_hash[yield(key)] = value
-      end
-      transformed_hash
     end
   end
 end
