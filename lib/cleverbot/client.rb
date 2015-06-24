@@ -79,17 +79,15 @@ module Cleverbot
     #
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
     def write(message = '')
-      cookie_string = @cookies.map{|(k, v)| "#{k}=#{v}"}.join(";")
-
       body = DEFAULT_PARAMS.merge @params
       body['stimulus'] = message
       body['icognocheck'] = digest(HashConversions.to_params(body))
 
       response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
 
-      set_cookies(response)
-
       parsed_response = response.parsed_response
+
+      set_cookies(response)
 
       message = parsed_response['message']
       parsed_response.keep_if { |key, value| DEFAULT_PARAMS.keys.include? key }
@@ -99,6 +97,11 @@ module Cleverbot
     end
 
     private
+
+    # Converts cookies to an HTTP header-ready string
+    def cookie_string
+      @cookies.map{|(k, v)| "#{k}=#{v}"}.join(";")
+    end
 
     # Gets cookies needed to interact with new Jabberwacky server.
     def set_cookies(response=nil)
