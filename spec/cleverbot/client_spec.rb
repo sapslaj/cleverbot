@@ -9,7 +9,7 @@ describe Cleverbot::Client do
     subject { Cleverbot::Client::DEFAULT_PARAMS }
 
     it do
-      should equal({
+      should eq({
         'stimulus' => '',
         'vText2' => '',
         'vText3' => '',
