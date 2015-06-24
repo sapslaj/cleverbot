@@ -1,11 +1,13 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'spec_helper'))
 
 describe Cleverbot::Client do
-  it 'should include HTTParty' do
-    should <= HTTParty
-  end
+  subject { Cleverbot::Client }
 
-  describe Cleverbot::Client::DEFAULT_PARAMS do
+  it { should <= HTTParty }
+
+  describe '::DEFAULT_PARAMS' do
+    subject { Cleverbot::Client::DEFAULT_PARAMS }
+
     it do
       should equal({
         'stimulus' => '',
@@ -26,15 +28,21 @@ describe Cleverbot::Client do
     end
   end
 
-  describe Cleverbot::Client::PATH do
+  describe '::PATH' do
+    subject { Cleverbot::Client::PATH }
+
     it { should == '/webservicemin' }
   end
 
-  describe Cleverbot::Client.base_uri do
+  describe '.base_uri' do
+    subject { Cleverbot::Client.base_uri }
+
     it { should == 'http://www.cleverbot.com' }
   end
 
-  describe Cleverbot::Client.parser do
+  describe '.parser' do
+    subject { Cleverbot::Client.parser }
+
     it { should == Cleverbot::Parser }
   end
 
