@@ -45,14 +45,9 @@ module Cleverbot
     # Holds the parameters for an instantiated Client.
     attr_reader :params
 
-    # Creates a digest from the form parameters.
-    #
-    # ==== Parameters
-    #
-    # [<tt>body</tt>] <tt>String</tt> to be digested.
-    def self.digest body
-      Digest::MD5.hexdigest body[9...35]
-    end
+    # Holds the session cookies
+    attr_reader :cookies
+
 
     # Sends a message to Cleverbot.com and returns a <tt>Hash</tt> containing the parameters received.
     #
@@ -62,7 +57,7 @@ module Cleverbot
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
     def self.write message='', params={}
       client = self.new(params)
-      {:message => client.write(message), :sessionid => client.params[:sessionid]}
+      {:message => client.write(message)}.merge! client.params
     end
 
     # Initializes a Client with given parameters.
@@ -87,7 +82,7 @@ module Cleverbot
 
       body = DEFAULT_PARAMS.merge @params
       body['stimulus'] = message
-      body['icognocheck'] = self.class.digest HashConversions.to_params(body)
+      body['icognocheck'] = digest(HashConversions.to_params(body))
 
       response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
 
@@ -111,6 +106,34 @@ module Cleverbot
         k, v = cookie.split("=")
         @cookies[k] = v
       end
+    end
+
+    # Creates a digest from the form parameters.
+    #
+    # ==== Parameters
+    #
+    # [<tt>body</tt>] <tt>String</tt> to be digested.
+    def digest body
+      Digest::MD5.hexdigest body[9...35]
+    end
+
+    # Changes keys in hash to symbols
+    def symbolize_keys hash
+      transform_keys(hash) { |k| k.to_sym }
+    end
+
+    # Changes keys in hash to strings
+    def stringify_keys hash
+      transform_keys(hash) { |k| k.to_s }
+    end
+
+    # General purpose hash key transformation factory
+    def transform_keys hash
+      transformed_hash = {}
+      hash.each_pair do |key, value|
+        transformed_hash[yield(key)] = value
+      end
+      transformed_hash
     end
   end
 end

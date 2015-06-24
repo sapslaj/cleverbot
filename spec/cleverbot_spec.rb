@@ -16,17 +16,14 @@ describe Cleverbot do
     end
 
     context "using singleton" do
-      it 'should give a proper hash response' do
+      it 'should respond with params' do
         expect(response).to be_a(Hash)
+        expect(response).to equal(subject.params)
       end
 
       it 'should have a message' do
         expect(response).to have_key(:message)
         expect(response[:message]).to match(valid_message)
-      end
-
-      it 'should have a session ID' do
-        expect(response).to have_key(:sessionid)
       end
     end
   end
