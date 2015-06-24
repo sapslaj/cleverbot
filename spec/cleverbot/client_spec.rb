@@ -60,12 +60,12 @@ describe Cleverbot::Client do
         end
 
         it 'should post to PATH' do
-          # Cleverbot::Client.should_receive(:post)
+          Cleverbot::Client.should_receive(:post)
           subject
         end
 
         it 'should add stimulus => "" to the post body' do
-          # Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('stimulus' => ''))
+          Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('stimulus' => ''))
           subject
         end
 
