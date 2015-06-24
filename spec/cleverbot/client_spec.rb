@@ -37,29 +37,7 @@ describe Cleverbot::Client do
   describe Cleverbot::Client.parser do
     it { should == Cleverbot::Parser }
   end
-
-  describe '.digest' do
-    subject { Cleverbot::Client.digest @body }
-    context 'given a body of 0123456789abcdefghijklmnopqrstuvwxyz' do
-      before :each do
-        @body = '0123456789abcdefghijklmnopqrstuvwxyz-truncateme'
-      end
-
-      it 'should call Digest::MD5.hexdigest with 9abcdefghijklmnopqrstuvwxyz' do
-        Digest::MD5.should_receive(:hexdigest).with @body[9..34]
-        subject
-      end
-
-      context 'when Digest::MD5.hexdigest returns abcd' do
-        before :each do
-          Digest::MD5.stub(:hexdigest).and_return 'abcd'
-        end
-
-        it { should == 'abcd' }
-      end
-    end
-  end
-
+  
   describe '.write' do
     subject { Cleverbot::Client.write @message, @params }
 
