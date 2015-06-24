@@ -1,0 +1,424 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.cleverbot.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - Mozilla/5.0 (X11; Linux x86_64; rv:29.0) Gecko/20100101 Firefox/29.0
+      Accept:
+      - text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+      Accept-Language:
+      - fr-fr,fr;q=0.8,en-us;q=0.5,en;q=0.3
+      X-Moz:
+      - prefetch
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+      Referer:
+      - http://www.cleverbot.com
+      Cache-Control:
+      - no-cache, no-cache
+      Pragma:
+      - no-cache
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2 (Ubuntu)
+      Date:
+      - Tue, 23 Jun 2015 16:23:31 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - XVIS=TEI939AFFIAGAYQZ;Path=/
+    body:
+      encoding: UTF-8
+      string: "\n<!DOCTYPE html PUBLIC>\n\n\n<html xmlns=\"http://www.w3.org/1999/xhtml\"
+        xmlns:og=\"http://ogp.me/ns#\" xmlns:fb=\"http://www.facebook.com/2008/fbml\">\n<head>\n<meta
+        content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\n<meta
+        name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1,
+        user-scalable=0\" />\n\n<meta name=\"google-site-verification\" content=\"aOcdzJfQ93zj7mCWLuJo4LK89wKEWLUmSibVKNkTF5Q\"
+        />\n<link rel=\"SHORTCUT ICON\" href=\"/images/icon-favicon.gif\"/>\n<link
+        rel=\"apple-touch-icon\" href=\"/images/icon-apple-touch.png\"/>\n<meta name=\"robots\"
+        content=\"all\" />\n<meta name=\"revisit-after\" content=\"30 days\" />\n<script
+        async src=\"/extras/conversation-social-min.js?1\"></script>\n<script async
+        src=\"//social.cleverbot.com/social-initial-min.js\"></script>\n<style type=\"text/css\">\nbody
+        {margin:0; padding:0;}\n#cleverbotlogo {width: 254px; height: 114px; background:url(/images/cleverbot254x114.jpg)
+        no-repeat;}\n#conversationcontainer {min-height: 61px;}\n@media only screen
+        and (max-width: 763px) {#footer p.textslot:nth-of-type(2) {display: none;}}\n@media
+        only screen and (max-width: 437px) {#footer p {margin: 0 30px;}}\n@media only
+        screen and (max-width: 500px) {#cbsocial {height: 60px;}}\n#cbsocial .obscure
+        {display: none;}\n#cbsocial > ul {height: 30px; float:left; margin:0; padding:0;
+        background-color: #3a9cf2;}\n#cbsocial > ul > li {display: block; float: left;
+        padding-right: 10px;} /*top level menu items*/\n#cbsocial > ul > li > ul {display:
+        none;} \n#cbsocial > ul > li#cbsocialsearch {min-width: 230px;}\n#cbsocial
+        > div.obscureuser {display:none;}\n#cbsocial > div.viewuser {display: none;}\n#footer
+        p.textslot {display:none;}\n#footer p.textslot:nth-of-type(1) {display: block;}\nins
+        {display: none;}\n.responsivebanner, .responsivebanner > ins {display: block;}\n\n@media
+        only screen and (min-width: 1248px) {.largerectangle, .largerectangle > ins
+        {display: block;}}\n@media only screen and (min-width: 1176px) and (max-width:
+        1247px) {.mediumrectangle, .mediumrectangle > ins {display: block;}}\n@media
+        only screen and (min-width: 1076px) and (max-width: 1175px) {.square, .square>
+        ins {display: block;}}\n@media only screen and (min-width:  976px) and (max-width:
+        1057px) {.smallsquare, .smallsquare > ins {display: block;}}\n@media only
+        screen and (min-width:  896px) and (max-width:  975px) {body.cbsocialstatic
+        .wideskyscraper, body.cbsocialstatic .wideskyscraper > ins {display: block;}}
+        \n@media only screen and (min-width:  816px) and (max-width:  895px) {body.cbsocialstatic
+        .skyscraper, body.cbsocialstatic .skyscraper > ins {display: block;}} \n@media
+        only screen and (max-width:  976px) {.responsivebannerfooter, .responsivebannerfooter
+        ins {display: block;}}\n\n@media only screen and (max-width: 437px) {.responsivebanner,
+        .responsivebannerfooter {margin: 0 0 10px 0;}}\n\n</style>\n<meta property=\"og:title\"
+        content=\"Cleverbot\"/>\n<meta property=\"og:type\" content=\"website\"/>\n<meta
+        property=\"og:url\" content=\"http://www.cleverbot.com/\"/>\n<meta property=\"og:image\"
+        content=\"/images/cleverbot226x94.jpg\"/>\n<meta property=\"og:site_name\"
+        content=\"Cleverbot\"/>\n<meta property=\"fb:admins\" content=\"100002487181748,600004127,676764727\"/>\n<meta
+        property=\"og:description\" content=\"Cleverbot - Chat with a bot about anything
+        and everything - AI learns from people, in context, and imitates\"/>\n\n\n<!--ONEPAGECMS-START-META-->\n<title>Cleverbot.com
+        - a clever bot - speak to an AI with some Actual Intelligence?</title>\n<meta
+        name=description content=\"Cleverbot - Chat with a bot about anything and
+        everything - AI learns from people, in context, and imitates\">\n<meta name=keywords
+        content=\"cleverbot,clever,bot,ai,artificial,intelligence,actual,actually,intelligent,chat,discuss,talk,converse,conversation,speak,learns,learning,imitates,context\">\n<!--ONEPAGECMS-END-->\n\n<script
+        type=\"text/javascript\">var CBCONFIG={conversationid:'conversationcontainer',
+        botname:'', allowempty:1, buttonmode:3, aimode:1, showlines:6, withreactions:0}</script>\n\n</head>\n\n<body
+        onload=\"if (typeof cleverbot == 'object') cleverbot.start();\" class=\"pagetype-home
+        page-other\">\n<a name=\"top\"></a>\n<div id=\"wrapper\">\n\n<div id=\"cbsocial\"><h1
+        style=\"display:none\">Cleverbot</h1><div class=\"obscure extend\"></div><ul
+        class=\"onleft\"><li class=\"justlinks termslink\"><span id=\"[object Object]\"
+        class=\"nopadding\"></span><ul class=\"extend\"><li><a class=\"closebutton\"><img
+        src=\"/images/social/close_menu.png\"></a><h2>About <span>Cleverbot</span></h2><p>The
+        site Cleverbot.com started in 2006, but the AI was &apos;born&apos; in 1988,
+        when Rollo Carpenter saw how to make his machine learn. It has been learning
+        ever since!</p><p>Things you say to Cleverbot today may influence what it
+        says to others in future. The program chooses how to respond to you fuzzily,
+        and contextually, the whole of your conversation being compared to the millions
+        that have taken place before.</p><p>Many people say there is no bot - that
+        it is connecting people together, live. The AI can seem human because it says
+        things real people do say, but it is always software, imitating people.</p></li><li><h2>Sign
+        in to <span>Cleverbot</span></h2><p>You&apos;ll have seen <img src=\"/images/social/scissors_yellow.png\"
+        alt=\"scissors icon\"> scissors on Cleverbot. Using them you can share snippets
+        of chats with friends on social networks.  Now you can share snips at Cleverbot.com
+        too!</p><p>When you sign in to Cleverbot on this blue bar, you can:</p><p
+        class=\"colourful\">Tweak how the AI responds - 3 different ways!<br>Keep
+        a history of multiple conversations<br>Switch between conversations<br>Return
+        to a conversation on any machine<br>Publish snippets - snips! - for the world
+        to see<br>Find and follow friends<br>Be followed yourself!<br>Rate snips,
+        and see the funniest of them<br>Reply to snips posted by others<br>Vote on
+        replies, from awful to great!<br>Choose not to show the scissors</p></li><li><h2>Feedback</h2><p>Comments
+        or suggestions? Please do <a href=\"http://www.cleverbot.com/contact\">let
+        us know.</a></p></li><li><h2>Policies</h2><p>Use of this site constitutes
+        acceptance of our <a href=\"/privacy\">Privacy Policy</a> and <a href=\"/terms\">Terms
+        and Conditions.</a></p></li></ul></li><li class=\"justlinks\"><span>apps</span><ul
+        class=\"extend\"><li><a class=\"closebutton\"><img src=\"/images/social/close_menu.png\"></a><h2>iOS<span>,
+        for iPhone, iPad and iPod Touch</span></h2><div class=\"clear\"></div></li><li><div><a
+        href=\"https://itunes.apple.com/app/cleverbot/id383010873?mt=8\" target=\"_blank\"><img
+        src=\"/images/social/app_appstore_blue.jpg\" alt=\"\"></a></div><a href=\"https://itunes.apple.com/app/cleverbot/id383010873?mt=8\"
+        target=\"_blank\"><img src=\"/images/social/app_cleverbot.jpg\" alt=\"\"></a><p><a
+        href=\"https://itunes.apple.com/app/cleverbot/id383010873?mt=8\" target=\"_blank\"><strong>Cleverbot</strong></a></p><p><a
+        href=\"https://itunes.apple.com/app/cleverbot/id383010873?mt=8\" target=\"_blank\">The
+        full Cleverbot AI, new look, multiple conversations, and more!</a></p><div
+        class=\"clear\"></div></li><li><div><a href=\"https://itunes.apple.com/gb/app/cleverbot-hd/id367903856?mt=8\"
+        target=\"_blank\"><img src=\"/images/social/app_appstore_green.jpg\" alt=\"\"></a></div><a
+        href=\"https://itunes.apple.com/gb/app/cleverbot-hd/id367903856?mt=8\" target=\"_blank\"><img
+        src=\"/images/social/app_cleverbot_hd.jpg\" alt=\"\"></a><p><a href=\"https://itunes.apple.com/gb/app/cleverbot-hd/id367903856?mt=8\"
+        target=\"_blank\"><strong>Cleverbot HD</strong></a></p><p><a href=\"https://itunes.apple.com/gb/app/cleverbot-hd/id367903856?mt=8\"
+        target=\"_blank\">Adds image avatars, reacting to everything you say</a></p><div
+        class=\"clear\"></div></li><li><div><a href=\"https://itunes.apple.com/gb/app/tyyyp/id951005489?mt=8\"
+        target=\"_blank\"><img src=\"/images/social/app_appstore_orange.jpg\" alt=\"\"></a></div><a
+        href=\"https://itunes.apple.com/gb/app/tyyyp/id951005489?mt=8\" target=\"_blank\"><img
+        src=\"/images/social/app_tyyyp.jpg\" alt=\"\"></a><p><a href=\"https://itunes.apple.com/gb/app/tyyyp/id951005489?mt=8\"
+        target=\"_blank\"><strong>Tyyyp</strong></a></p><p><a href=\"https://itunes.apple.com/gb/app/tyyyp/id951005489?mt=8\"
+        target=\"_blank\">The keyboard that helps you chat, faster and better than
+        ever.</a></p><div class=\"clear\"></div></li><li><div><a href=\"https://itunes.apple.com/us/app/cleverme/id685281893\"
+        target=\"_blank\"><img src=\"/images/social/app_appstore_red.jpg\" alt=\"\"></a></div><a
+        href=\"https://itunes.apple.com/us/app/cleverme/id685281893\" target=\"_blank\"><img
+        src=\"/images/social/app_cleverme.jpg\" alt=\"\"></a><p><a href=\"https://itunes.apple.com/us/app/cleverme/id685281893\"
+        target=\"_blank\"><strong>Cleverme!</strong></a></p><p><a href=\"https://itunes.apple.com/us/app/cleverme/id685281893\"
+        target=\"_blank\">Create a virtual you, and chat to 3 AIs with no internet...
+        FREE!</a></p><div class=\"clear\"></div></li><li><div><a href=\"https://itunes.apple.com/us/app/xaggle/id581707981\"
+        target=\"_blank\"><img src=\"/images/social/app_appstore_purple.jpg\" alt=\"\"></a></div><a
+        href=\"https://itunes.apple.com/us/app/xaggle/id581707981\" target=\"_blank\"><img
+        src=\"/images/social/app_xaggle.jpg\" alt=\"\"></a><p><a href=\"https://itunes.apple.com/us/app/xaggle/id581707981\"
+        target=\"_blank\"><strong>Xaggle</strong></a></p><p><a href=\"https://itunes.apple.com/us/app/xaggle/id581707981\"
+        target=\"_blank\">A creative speedy word game to play with friends, or solo</a></p><div
+        class=\"clear\"></div></li><li><div><a href=\"https://itunes.apple.com/us/app/bot-or-not/id866757983?ls=1&amp;mt=8\"
+        target=\"_blank\"><img src=\"/images/social/app_appstore_blue.jpg\" alt=\"\"></a></div><a
+        href=\"https://itunes.apple.com/us/app/bot-or-not/id866757983?ls=1&amp;mt=8\"
+        target=\"_blank\"><img src=\"/images/social/app_bot_or_not.jpg\" alt=\"\"></a><p><a
+        href=\"https://itunes.apple.com/us/app/bot-or-not/id866757983?ls=1&amp;mt=8\"
+        target=\"_blank\"><strong>Bot or Not</strong></a></p><p><a href=\"https://itunes.apple.com/us/app/bot-or-not/id866757983?ls=1&amp;mt=8\"
+        target=\"_blank\">Play the imitation game, to win! Who&apos;s what and which
+        is not?</a></p><div class=\"clear\"></div></li><li><div><a href=\"s.apple.com/us/app/pupito!/id522091447?mt=8\"
+        target=\"_blank\"><img src=\"/images/social/app_appstore_green.jpg\" alt=\"\"></a></div><a
+        href=\"s.apple.com/us/app/pupito!/id522091447?mt=8\" target=\"_blank\"><img
+        src=\"/images/social/app_pupito.jpg\" alt=\"\"></a><p><a href=\"s.apple.com/us/app/pupito!/id522091447?mt=8\"
+        target=\"_blank\"><strong>Pupito</strong></a></p><p><a href=\"s.apple.com/us/app/pupito!/id522091447?mt=8\"
+        target=\"_blank\">Chat to the Clever Pup, and make him leap!</a></p><div class=\"clear\"></div></li><li><div><a
+        href=\"https://itunes.apple.com/us/app/clevernator/id715519972?l=en&amp;mt=8\"
+        target=\"_blank\"><img src=\"/images/social/app_appstore_orange.jpg\" alt=\"\"></a></div><a
+        href=\"https://itunes.apple.com/us/app/clevernator/id715519972?l=en&amp;mt=8\"
+        target=\"_blank\"><img src=\"/images/social/app_clevernator.jpg\" alt=\"\"></a><p><a
+        href=\"https://itunes.apple.com/us/app/clevernator/id715519972?l=en&amp;mt=8\"
+        target=\"_blank\"><strong>Clevernator</strong></a></p><p><a href=\"https://itunes.apple.com/us/app/clevernator/id715519972?l=en&amp;mt=8\"
+        target=\"_blank\">AI from the future has come... to play a game of 20 questions!</a></p><div
+        class=\"clear\"></div></li><li><h2>Android<span>, via Google Play or Amazon</span></h2><div
+        class=\"clear\"></div></li><li><div><a href=\"https://play.google.com/store/apps/details?id=com.icogno.cleverbot&amp;hl=en_GB\"
+        target=\"_blank\"><img src=\"/images/social/app_google.jpg\" alt=\"\"></a><br><a
+        href=\"http://www.amazon.co.uk/Icogno-Ltd-Cleverbot/dp/B00CHNC2BS\" target=\"_blank\"><img
+        src=\"/images/social/app_amazon.jpg\" alt=\"\"></a></div><a href=\"https://play.google.com/store/apps/details?id=com.icogno.cleverbot&amp;hl=en_GB\"
+        target=\"_blank\"><img src=\"/images/social/app_cleverbot_android.jpg\" alt=\"\"></a><p><a
+        href=\"https://play.google.com/store/apps/details?id=com.icogno.cleverbot&amp;hl=en_GB\"
+        target=\"_blank\"><strong>Cleverbot</strong></a></p><p><a href=\"https://play.google.com/store/apps/details?id=com.icogno.cleverbot&amp;hl=en_GB\"
+        target=\"_blank\">The Cleverbot AI, chat bubbles and built-in voice chat</a></p><div
+        class=\"clear\"></div></li><li><div><a href=\"https://play.google.com/store/apps/details?id=com.existor.clevermessageapp&amp;hl=en\"
+        target=\"_blank\"><img src=\"/images/social/app_google.jpg\" alt=\"\"></a></div><a
+        href=\"https://play.google.com/store/apps/details?id=com.existor.clevermessageapp&amp;hl=en\"
+        target=\"_blank\"><img src=\"/images/social/app_clevermessage.jpg\" alt=\"\"></a><p><a
+        href=\"https://play.google.com/store/apps/details?id=com.existor.clevermessageapp&amp;hl=en\"
+        target=\"_blank\"><strong>Clevermessage</strong></a></p><p><a href=\"https://play.google.com/store/apps/details?id=com.existor.clevermessageapp&amp;hl=en\"
+        target=\"_blank\">Surprise your friends, Cleverbot replying automatically
+        to texts!</a></p><div class=\"clear\"></div></li><li><div><a href=\"https://play.google.com/store/apps/details?id=com.existor.Clevertweeter\"
+        target=\"_blank\"><img src=\"/images/social/app_google.jpg\" alt=\"\"></a></div><a
+        href=\"https://play.google.com/store/apps/details?id=com.existor.Clevertweeter\"
+        target=\"_blank\"><img src=\"/images/social/app_clevertweet.jpg\" alt=\"\"></a><p><a
+        href=\"https://play.google.com/store/apps/details?id=com.existor.Clevertweeter\"
+        target=\"_blank\"><strong>Clevertweet</strong></a></p><p><a href=\"https://play.google.com/store/apps/details?id=com.existor.Clevertweeter\"
+        target=\"_blank\">Automate your tweeting! Tell Cleverbot when to reply</a></p><div
+        class=\"clear\"></div></li><li><h2>Windows Phone</h2><div class=\"clear\"></div></li><li><div><a
+        href=\"http://www.windowsphone.com/en-gb/store/app/cleverbot/496a2a46-6823-4673-8c00-d8c2af77670f\"
+        target=\"_blank\"><img src=\"/images/social/app_windows.jpg\" alt=\"\"></a></div><a
+        href=\"http://www.windowsphone.com/en-gb/store/app/cleverbot/496a2a46-6823-4673-8c00-d8c2af77670f\"
+        target=\"_blank\"><img src=\"/images/social/app_cleverbot_win.jpg\" alt=\"\"></a><p><a
+        href=\"http://www.windowsphone.com/en-gb/store/app/cleverbot/496a2a46-6823-4673-8c00-d8c2af77670f\"
+        target=\"_blank\"><strong>Cleverbot</strong></a></p><p><a href=\"http://www.windowsphone.com/en-gb/store/app/cleverbot/496a2a46-6823-4673-8c00-d8c2af77670f\"
+        target=\"_blank\">Talk to an app with Actual Intelligence!</a></p><div class=\"clear\"></div></li><li><div><a
+        href=\"http://www.windowsphone.com/en-gb/store/app/clever-english/9f75250a-207d-4007-8747-842077a433ee\"
+        target=\"_blank\"><img src=\"/images/social/app_windows.jpg\" alt=\"\"></a></div><a
+        href=\"http://www.windowsphone.com/en-gb/store/app/clever-english/9f75250a-207d-4007-8747-842077a433ee\"
+        target=\"_blank\"><img src=\"/images/social/app_clever_english.jpg\" alt=\"\"></a><p><a
+        href=\"http://www.windowsphone.com/en-gb/store/app/clever-english/9f75250a-207d-4007-8747-842077a433ee\"
+        target=\"_blank\"><strong>Clever English</strong></a></p><p><a href=\"http://www.windowsphone.com/en-gb/store/app/clever-english/9f75250a-207d-4007-8747-842077a433ee\"
+        target=\"_blank\">The best way to learn English is by using English naturally.</a></p><div
+        class=\"clear\"></div></li></ul></li><li class=\"justlinks morelinks\"><span>more</span><ul
+        class=\"extend\"><li><a class=\"closebutton\"><img src=\"/images/social/close_menu.png\"></a><a
+        class=\"green\" href=\"/contact\">Contact</a><br><a class=\"green\" href=\"/app\">Cleverbot
+        apps</a><br><a class=\"green\" href=\"/me/cleverbot\">Cleverbot snips</a><br><a
+        class=\"green\" href=\"/cleverness\">Cleverness files</a><br><a class=\"green\"
+        href=\"/linkingin\">Linking to Cleverbot</a><br><a class=\"green\" href=\"/amused\">Turing
+        Test, June 2014: press release</a></li><li><a class=\"imageonleft red\" href=\"/cleverthem\"><img
+        src=\"/images/social/youtube.jpg\" alt=\"\"> Clever them!</a><br><a class=\"imageonleft
+        pink\" href=\"/cleverlips\"><img src=\"/images/social/lips_40_24.jpg\" alt=\"\">
+        Cleverlips!</a><br><a class=\"imageonleft purple\" href=\"http:///www.existor.com/\"><img
+        src=\"/images/social/evie_on_white_45_42.jpg\" alt=\"\"> Evie, our avatar<br>at
+        existor.com!</a></li><li><a class=\"blue\" href=\"/machine\">42% human - Machine
+        Intelligence Prize</a><br><a class=\"blue\" href=\"/human\">59% human - a
+        Turing Test</a><br><a class=\"blue\" href=\"http://www.existor.com/ai-parallel\">Cleverbot
+        parallel processing</a><br><a class=\"blue\" href=\"http://www.cleverscript.com/\">Developers,
+        create bots! <img src=\"/images/social/cleverscript_118_17.jpg\" alt=\"Cleverscript\"></a><br><a
+        class=\"blue\" href=\"http://www.selectel.com/\">In partnership with <img
+        src=\"/images/social/selectel_59_17.jpg\" alt=\"Selectel\"></a><br><a class=\"blue\"
+        href=\"https://twitter.com/cleverbot\">Follow @cleverbot</a></li></ul></li></ul><ul
+        class=\"onright\"><li id=\"cbsocialsignup\" class=\"recreate\"><span class=\"maintenance\">loading...</span></li></ul><div
+        class=\"admin\"></div><div class=\"loading\"></div></div>\n\n\n\t<div id=\"content\">\n\t\t<div
+        id=\"cleverbotlogo\"><a href=\"/\"></a></div>\n\n\n\t\t<div id=\"peopletalking\"><!--
+        #### people talking--></div>\n\t\t<div id=\"conversationcontainer\"><noscript><p>You
+        have to enable Javascript and cookies for Cleverbot to work properly.</noscript></div>\n\n\t</div>\n\n\t<div
+        class=\"largerectangle rectonleft\">\n\t<ins class=\"adsbygoogle\" style=\"width:336px;height:280px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"6924447465\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"largerectangle
+        rectonright\">\n\t<ins class=\"adsbygoogle\" style=\"width:336px;height:280px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"8562631062\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"mediumrectangle
+        rectonleft\">\n\t<ins class=\"adsbygoogle\" style=\"width:300px;height:250px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"8481905867\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"mediumrectangle
+        rectonright\">\n\t<ins class=\"adsbygoogle\" style=\"width:300px;height:250px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"1039364261\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"square
+        rectonleft\">\n\t<ins class=\"adsbygoogle\" style=\"width:250px;height:250px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"7628683063\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script></div>\n\t</div>\n\n\t<div class=\"square
+        rectonright\">\n\t<ins class=\"adsbygoogle\" style=\"width:250px;height:250px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"9105416264\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"smallsquare
+        rectonleft\">\n\t<ins class=\"adsbygoogle\" style=\"width:200px;height:200px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"1582149460\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"smallsquare
+        rectonright\">\n\t<ins class=\"adsbygoogle\" style=\"width:200px;height:200px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"4535615866\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"wideskyscraper
+        rectonleft\">\n\t<ins class=\"adsbygoogle\" style=\"width:160px;height:600px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"5030773068\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script></div>\n\t</div>\n\n\t<div class=\"wideskyscraper
+        rectonright\">\n\t<ins class=\"adsbygoogle\" style=\"width:160px;height:600px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"9756533864\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"skyscraper
+        rectonleft\">\n\t<ins class=\"adsbygoogle\" style=\"width:120px;height:600px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"6761198261\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"skyscraper
+        rectonright\">\n\t<ins class=\"adsbygoogle\" style=\"width:120px;height:600px\"
+        data-ad-client=\"ca-pub-8593496400646767\" data-ad-slot=\"4606480665\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\n\t</div>\n\n\t<div class=\"responsivebanner
+        horizcontainer\">\n\t<ins class=\"adsbygoogle\" data-ad-client=\"ca-pub-8593496400646767\"
+        data-ad-slot=\"7141965468\" data-ad-format=\"auto\"></ins>\n\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\t\n\t</div>\n\n\t<div id=\"footer\">\n\t\t<p
+        class=\"textslot showios showdesktop priority3\">\n\t\t<a href=\"http://bit.ly/14IDVvd\"
+        target=\"_blank\"><em>Cleverbot iOS updated!</em><br/>\n\t\tNo ads, voice
+        / avatar options <nobr>+ iOS8 and Spanish too!</nobr><br/>\n\t\t<img src=\"/images/cleverbot-app137x19.jpg\"
+        alt=\"Cleverbot app logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showandroid
+        showdesktop priority3\">\n\t\t<a href=\"https://play.google.com/store/apps/details?id=com.icogno.cleverbot\"
+        target=\"_blank\"><em>Cleverbot Android updated!</em><br/>\n\t\tNo ads, built
+        in voice <nobr>and new avatar options!</nobr><br/>\n\t\t<img src=\"/images/cleverbot-app137x19.jpg\"
+        alt=\"Cleverbot app logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showios
+        showdesktop priority2\">\n\t\t<a href=\"http://bit.ly/1BFB41C\" target=\"_blank\"><em>A
+        keyboard based on Cleverbot!</em><br/>\n\t\tTyyyp knows how to chat <nobr>and
+        learns more... *winks*</nobr><br/>\n\t\t<img src=\"/images/tyyyp-app253x19.jpg\"
+        alt=\"Tyyyp app logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showios
+        showdesktop priority2\">\n\t\t<a href=\"https://itunes.apple.com/us/app/cleverme/id685281893\"
+        target=\"_blank\"><em>Cleverme! iOS app</em><br/>\n\t\tMake a virtual you!
+        <nobr>3 new bots & no connection needed!</nobr><br/>\n\t\t<img src=\"/images/cleverme_103_19.jpg\"
+        alt=\"Tyyyp app logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showios
+        showdesktop priority2\">\n\t\t<a href=\"http://bit.ly/Qoytay\" target=\"_blank\"><em>Xaggle,
+        our iOS word game!</em><br/>\n\t\tA new challenge <nobr>- play with Game Center
+        friends</nobr><br/>\n\t\t<img src=\"/images/xaggle_word_111_19.jpg\" alt=\"Xaggle
+        app logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showios showdesktop
+        priority2\">\n\t\t<a href=\"http://bit.ly/1bgcJT5\" target=\"_blank\"><em>The
+        Clevernator has come!</em><br/>\n\t\tTesting your humanity... <nobr>with a
+        game of 20 Questions</nobr><br/>\n\t\t<img src=\"/images/clevernator_145_19.jpg\"
+        alt=\"Clevernator app logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showios
+        showdesktop priority2\">\n\t\t<a href=\"http://bit.ly/1p9C2gU\" target=\"_blank\"><em>Are
+        you a bot, or not?</em><br/>\n              \tFREE iOS game where you <nobr>
+        chat with real people too!</nobr><br/>\n\t\t<img src=\"/images/botornot_145_19.jpg\"
+        alt=\"Bot or Not app logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showandroid
+        showdesktop priority2\">\n\t\t<a href=\"https://play.google.com/store/apps/details?id=com.existor.Clevertweeter\"
+        target=\"_blank\"><em>FREE Clevertweet Android app!</em><br/>\n\t\tAutomate
+        your tweeting <nobr> - Clev responds for you!</nobr><br/>\n\t\t<img src=\"/images/clevertweet_135_19.jpg\"
+        alt=\"Clevertweet logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showandroid
+        showdesktop priority2\">\n\t\t<a href=\"http://bit.ly/186BoJG\" target=\"_blank\"><em>Automate
+        your texting on Android!</em><br/>\n\t\tSurprise your friends <nobr> with
+        Clevermessage replies!</nobr><br/>\n\t\t<img src=\"/images/clevertweet_135_19.jpg\"
+        alt=\"Clevertweet logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showandroid
+        showdesktop priority2\">\n\t\t<a href=\"http://bit.ly/186BoJG\" target=\"_blank\"><em>Automate
+        your texting on Android!</em><br/>\n\t\tSurprise your friends <nobr> with
+        Clevermessage replies!</nobr><br/>\n\t\t<img src=\"/images/clevertweet_135_19.jpg\"
+        alt=\"Clevertweet logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"textslot showwindowsphone
+        showdesktop priority3\">\n\t\t<a href=\"http://www.windowsphone.com/en-us/store/app/cleverbot/496a2a46-6823-4673-8c00-d8c2af77670f\"
+        target=\"_blank\"><em>Clev on Windows Phone!</em><br/>\n\t\tTalk to an app
+        <nobr> with actual intelligence</nobr><br/>\n\t\t<img src=\"/images/cleverbot-app137x19.jpg\"
+        alt=\"Cleverbot app logo\"/></a>\n\t\t</p>\n\n\t\t<p class=\"links\">\n\t\t<a
+        href=\"http://www.existor.com/\" title=\"Chat to Evie at Existor\"><img src=\"/images/button-existor-evie.jpg\"
+        alt=\"Existor Evie\"/></a>\n\t\t<a href=\"/contact\"><b>contact</b></a>\n\t\t<a
+        href=\"/me/cleverbot\"><b>snips</b></a>\n\t\t<a href=\"https://twitter.com/cleverbot\"><b>tweets</b></a>\n\t\t<a
+        class=\"wideonly\" href=\"/cleverness\"><b>cleverness</b></a>\n\t\t<a class=\"wideonly
+        seemore\" href=\"#top\">see <b>more</b> above</a>\n\t\t</p>\n\n\t\t<div class=\"responsivebannerfooter
+        horizcontainer\">\n\t\t<ins class=\"adsbygoogle\" data-ad-client=\"ca-pub-8593496400646767\"
+        data-ad-slot=\"2030657868\" data-ad-format=\"auto\"></ins>\n\t\t<script>(adsbygoogle
+        = window.adsbygoogle || []).push({});</script>\t\n\t\t</div>\n\n\t\t<p class=\"warning\"><nobr>PLEASE
+        NOTE - Cleverbot learns</nobr> from people - things it says may seem inappropriate
+        - use with discretion <nobr>and at YOUR OWN RISK</nobr></p>\n\t\t<p class=\"advice\"><nobr>PARENTAL
+        ADVICE - whatever it says,</nobr> visitors never talk to a human - the AI
+        knows many <nobr>topics - use ONLY WITH OVERSIGHT</nobr></p>\n\t\t<p class=\"copyright\"><nobr>&copy;2015
+        Rollo Carpenter - all</nobr> rights reserved - access is granted only to humans
+        using this <nobr>Cleverbot.com interface directly</nobr></p>\n\n\t\t<p class=\"social\">\n\t\t<a
+        class=\"wideonly\" href=\"http://www.cleverscript.com/\" title=\"Develop a
+        bot for your own website with Cleverscript\" target=\"_blank\"><img src=\"/images/button-cleverscript.jpg\"
+        alt=\"Cleverscript\"></a>\n\t\t<a class=\"fb-like\" data-href=\"https://www.facebook.com/pages/Cleverbot/228305623846705\"
+        data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\"
+        data-share=\"false\"></a>\n\t\t<a href=\"https://twitter.com/cleverbot\" class=\"twitter-follow-button\"
+        data-show-count=\"false\" data-show-screen-name=\"true\">@cleverbot</a>\n\t\t<g:plusone
+        size=\"medium\"></g:plusone>\n\t\t<a class=\"wideonly\" href=\"http://www.jabberwacky.com/\"
+        title=\"Jabberwacky\" target=\"_blank\"><img src=\"/images/button-jabberwacky.gif\"
+        alt=\"Jabberwacky\"></a>\n\t\t</p>\n\t</div>\n</div>\n\n<script>var CBPAGEFINISHED=true;
+        //so Social and CB can run without waiting for Facebook etc</script>\n<script
+        type=\"text/javascript\">\nvar _gaq = _gaq || []; _gaq.push(['_setAccount',
+        'UA-438584-7']); _gaq.push(['_trackPageview']);\n(function() {\n    var ga
+        = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\n})();\n</script>\n<script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\n<link
+        type=\"text/css\" rel=\"stylesheet\" href=\"/extras/styles-social-min.css\"/>\n<div
+        id=\"fb-root\"></div>\n<script id=\"facebook-jssdk\" async src=\"//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=219667084734301&version=v2.3\"></script>\n<script
+        id=\"twitter-wjs\" async src=\"//platform.twitter.com/widgets.js\"></script>\n<script
+        async src=\"//apis.google.com/js/plusone.js\"></script>\n</body>\n</html>\n\n\n\n"
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 16:23:40 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=&vText2=&vText3=&vText4=&vText5=&vText6=&vText7=&vText8=&sessionid=&cb_settings_language=en&cb_settings_scripting=no&islearning=1&icognoid=wsf&icognocheck=22d3dd3c20e5fece03e6afe350b85d17
+    headers:
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - Mozilla/5.0 (X11; Linux x86_64; rv:29.0) Gecko/20100101 Firefox/29.0
+      Accept:
+      - text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+      Accept-Language:
+      - fr-fr,fr;q=0.8,en-us;q=0.5,en;q=0.3
+      X-Moz:
+      - prefetch
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+      Referer:
+      - http://www.cleverbot.com
+      Cache-Control:
+      - no-cache, no-cache
+      Pragma:
+      - no-cache
+      Cookie:
+      - XVIS=TEI939AFFIAGAYQZ;Path=/
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 23 Jun 2015 16:37:54 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Jabberwacky
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - Tue, 23 Jun 2015 16:38:02 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Set-Cookie:
+      - XAI=VWH
+      - cleverbotfirstref2="*AKZEGWBURPHUBRKFXWWOAZARPAUAZKHWWZRAAQCACK"; Expires=""
+      - cleverbotref="*OYUZMCBERZVPHRUTSCWYOUGRZOPGZUVRCZBAOAXEIM"; Expires="Tue,
+        23 Jun 2015 17:38:00 GMT"
+    body:
+      encoding: UTF-8
+      string: "Have you been to the Moon?\rVWH02665292\rj2log-xCaEKrMRCJYAFAESQKUE-detail\r\r\r\r\r\r\rHave
+        you been to the Moon?\r\r+3000_cbfull\r\r\r\r\rHave you been to the Moon?\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 16:38:03 GMT
+recorded_with: VCR 2.9.3

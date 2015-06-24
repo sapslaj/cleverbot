@@ -62,7 +62,7 @@ module Cleverbot
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
     def self.write message='', params={}
       client = self.new(params)
-      client.write message
+      {:message => client.write(message), :sessionid => client.params[:sessionid]}
     end
 
     # Initializes a Client with given parameters.
@@ -104,7 +104,7 @@ module Cleverbot
 
     private
 
-    # Gets cookies needed to interact with new Jabberwocky server.
+    # Gets cookies needed to interact with new Jabberwacky server.
     def set_cookies(response=nil)
       response ||= self.class.get("/")
       response.headers['set-cookie'].split(";").each do |cookie|
