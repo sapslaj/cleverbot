@@ -83,11 +83,7 @@ module Cleverbot
       body['stimulus'] = message
       body['icognocheck'] = digest(HashConversions.to_params(body))
 
-      response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
-
-      parsed_response = response.parsed_response
-
-      set_cookies(response)
+      parsed_response = send_message_request(body)
 
       message = parsed_response['message']
       parsed_response.keep_if { |key, value| DEFAULT_PARAMS.keys.include? key }
@@ -97,6 +93,14 @@ module Cleverbot
     end
 
     private
+
+    # POST request helper
+    def send_message_request(body)
+      response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
+      set_cookies(response)
+
+      response.parsed_response
+    end
 
     # Converts cookies to an HTTP header-ready string
     def cookie_string
