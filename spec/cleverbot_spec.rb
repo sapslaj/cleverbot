@@ -1,6 +1,6 @@
 require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 
-describe Cleverbot do
+describe Cleverbot, :no_vcr do
   describe "high level integration" do
     subject { Cleverbot::Client }
     let(:response) { subject.write('hi.') }
