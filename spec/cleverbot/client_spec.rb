@@ -91,11 +91,11 @@ describe Cleverbot::Client do
       end
 
       it 'should add stimulus => "" to the post body' do
-        # Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('stimulus' => ''))
         @client.should_receive(:send_message_request) do |body|
           expect(body).to include('stimulus' => '')
           {}
         end
+        
         subject
       end
 
@@ -107,11 +107,11 @@ describe Cleverbot::Client do
         end
 
         it 'should add icognocheck to the post body' do
-          # Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('icognocheck' => hex_digest))
           @client.should_receive(:send_message_request) do |body|
             expect(body).to include('icognocheck' => hex_digest)
             {}
           end
+
           subject
         end
       end
@@ -125,7 +125,6 @@ describe Cleverbot::Client do
       end
 
       it 'should add stimulus => "Hi!" to the post body' do
-        # Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('stimulus' => user_message))
         @client.should_receive(:send_message_request) do |body|
           expect(body).to include('stimulus' => user_message)
           {}
