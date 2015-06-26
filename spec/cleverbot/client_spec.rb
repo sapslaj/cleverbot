@@ -3,13 +3,15 @@ require File.expand_path(File.join(File.dirname(__FILE__), '..', 'spec_helper'))
 describe Cleverbot::Client do
   subject { Cleverbot::Client }
 
-  it { should <= HTTParty }
+  it 'should include HTTParty' do |variable|
+    should <= HTTParty
+  end
 
   describe '::DEFAULT_PARAMS' do
     subject { Cleverbot::Client::DEFAULT_PARAMS }
 
     it do
-      should == {
+      should eq({
         'stimulus' => '',
         'vText2' => '',
         'vText3' => '',
@@ -24,7 +26,7 @@ describe Cleverbot::Client do
         'islearning' => '1',
         'icognoid' => 'wsf',
         'icognocheck' => '',
-      }
+      })
     end
   end
 
@@ -46,69 +48,18 @@ describe Cleverbot::Client do
     it { should == Cleverbot::Parser }
   end
 
-  describe '.digest' do
-    subject { Cleverbot::Client.digest @body }
-    context 'given a body of 0123456789abcdefghijklmnopqrstuvwxyz' do
-      before :each do
-        @body = '0123456789abcdefghijklmnopqrstuvwxyz-truncateme'
-      end
-
-      it 'should call Digest::MD5.hexdigest with 9abcdefghijklmnopqrstuvwxyz' do
-        Digest::MD5.should_receive(:hexdigest).with @body[9..34]
-        subject
-      end
-
-      context 'when Digest::MD5.hexdigest returns abcd' do
-        before :each do
-          Digest::MD5.stub(:hexdigest).and_return 'abcd'
-        end
-
-        it { should == 'abcd' }
-      end
-    end
-  end
-
   describe '.write' do
     subject { Cleverbot::Client.write @message, @params }
 
-    context 'with params {}' do
-      before :each do
+    context 'with an empty message' do
+      before(:each) do
+        @message = ''
         @params = {}
       end
 
-      context 'with an empty message' do
-        before :each do
-          @message = ''
-        end
-
-        it 'should post to PATH' do
-          Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, hash_including).and_return double(:parsed_response => {})
-          subject
-        end
-
-        it 'should add stimulus => "" to the post body' do
-          Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('stimulus' => '')).and_return double(:parsed_response => {})
-          subject
-        end
-
-        context 'when digest returns abcd' do
-          before :each do
-            Digest::MD5.stub(:hexdigest).and_return 'abcd'
-          end
-
-          it 'should add icognocheck => "abcd" to the post body' do
-            Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('icognocheck' => 'abcd')).and_return double(:parsed_response => {})
-            subject
-          end
-        end
-
-        context 'when the parsed response is {}' do
-          before :each do
-            Cleverbot::Client.stub(:post).and_return double(:parsed_response => {})
-          end
-
-          it { should == {} }
-        end
+      it 'should respond with params' do
+        expect(subject).to be_a(Hashie::Mash)
+        expect(subject).to respond_to(:sessionid)
       end
     end
   end
@@ -139,35 +90,48 @@ describe Cleverbot::Client do
         @message = ''
       end
 
-      Cleverbot::Client::DEFAULT_PARAMS.each do |key, value|
-        next if ['stimulus', 'icognocheck'].include? key
-
-        # hash_including seems to be broken. Skip test until further notice. 
-        xit "should add #{key} => #{value.inspect} to the post body" do
-          Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including(key => value)).and_return double(:parsed_response => {})
-          subject
+      it 'should add stimulus => "" to the post body' do
+        # Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('stimulus' => ''))
+        @client.should_receive(:send_message_request) do |body|
+          expect(body).to include('stimulus' => '')
+          {}
         end
-      end
-
-      it 'should call .write with "" and #params' do
-        Cleverbot::Client.should_receive(:write).with(@message, @client.params).and_return({})
         subject
       end
 
-      context 'when .write returns { "message" => "Hi.", "sessionid" => "abcd" }' do
+      context 'when digest returns abcd' do
+        let(:hex_digest) { "e2fc714c4727ee9395f324cd2e7f331f" }
+
         before :each do
-          Cleverbot::Client.stub(:write).and_return 'message' => 'Hi.', 'sessionid' => 'abcd'
+          Digest::MD5.stub(:hexdigest).and_return hex_digest
         end
 
-        it 'should set #params[sessionid] to abcd' do
+        it 'should add icognocheck to the post body' do
+          # Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('icognocheck' => hex_digest))
+          @client.should_receive(:send_message_request) do |body|
+            expect(body).to include('icognocheck' => hex_digest)
+            {}
+          end
           subject
-          @client.params['sessionid'].should == 'abcd'
+        end
+      end
+    end
+
+    context 'with a message containing "Hi!"' do
+      let(:user_message) { "Hi!" }
+
+      before :each do
+        @message = user_message
+      end
+
+      it 'should add stimulus => "Hi!" to the post body' do
+        # Cleverbot::Client.should_receive(:post).with(Cleverbot::Client::PATH, :body => hash_including('stimulus' => user_message))
+        @client.should_receive(:send_message_request) do |body|
+          expect(body).to include('stimulus' => user_message)
+          {}
         end
 
-        it 'should not set #params[message] to Hi.' do
-          subject
-          @client.params['message'].should_not == 'abcd'
-        end
+        subject
       end
     end
   end

@@ -1,6 +1,6 @@
 require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 
-describe Cleverbot do
+describe Cleverbot, :no_vcr do
   describe "high level integration" do
     subject { Cleverbot::Client }
     let(:response) { subject.write('hi.') }
@@ -17,8 +17,8 @@ describe Cleverbot do
 
     context "using singleton" do
       it 'should respond with params' do
-        expect(response).to be_a(Hash)
-        expect(response).to equal(subject.params)
+        expect(response).to be_a(Hashie::Mash)
+        expect(response).to respond_to(:sessionid)
       end
 
       it 'should have a message' do

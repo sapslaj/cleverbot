@@ -58,7 +58,7 @@ module Cleverbot
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
     def self.write(message = '', params = {})
       client = self.new(params)
-      {:message => client.write(message)}.merge! client.params
+      Hashie::Mash.new(:message => client.write(message)).merge client.params
     end
 
     # Initializes a Client with given parameters.
@@ -79,17 +79,11 @@ module Cleverbot
     #
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
     def write(message = '')
-      cookie_string = @cookies.map{|(k, v)| "#{k}=#{v}"}.join(";")
-
       body = DEFAULT_PARAMS.merge @params
       body['stimulus'] = message
       body['icognocheck'] = digest(HashConversions.to_params(body))
 
-      response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
-
-      set_cookies(response)
-
-      parsed_response = response.parsed_response
+      parsed_response = send_message_request(body)
 
       message = parsed_response['message']
       parsed_response.keep_if { |key, value| DEFAULT_PARAMS.keys.include? key }
@@ -99,6 +93,19 @@ module Cleverbot
     end
 
     private
+
+    # POST request helper
+    def send_message_request(body)
+      response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
+      set_cookies(response)
+
+      response.parsed_response
+    end
+
+    # Converts cookies to an HTTP header-ready string
+    def cookie_string
+      @cookies.map{|(k, v)| "#{k}=#{v}"}.join(";")
+    end
 
     # Gets cookies needed to interact with new Jabberwacky server.
     def set_cookies(response=nil)
