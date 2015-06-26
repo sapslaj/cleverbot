@@ -17,8 +17,8 @@ describe Cleverbot do
 
     context "using singleton" do
       it 'should respond with params' do
-        expect(response).to be_a(Hash)
-        expect(response).to equal(subject.params)
+        expect(response).to be_a(Hashie::Mash)
+        expect(response).to respond_to(:sessionid)
       end
 
       it 'should have a message' do
