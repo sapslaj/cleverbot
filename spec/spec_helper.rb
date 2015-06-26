@@ -17,8 +17,14 @@ VCR.configure do |config|
 end
 
 RSpec.configure do |config|
-  # config.treat_symboles_as_metadata_keys_with_true_values = true
-  config.around(:each, :vcr) do |example|
+  config.treat_symbols_as_metadata_keys_with_true_values = true
+  config.around(:each) do |example|
     VCR.use_cassette("cleverbot", :record => :new_episodes) { example.call }
+  end
+
+  config.around(:each, :no_vcr) do |example|
+    VCR.configure do |c|
+      c.default_cassette_options = {record: :all}
+    end
   end
 end

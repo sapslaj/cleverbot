@@ -1,4 +1,5 @@
 require 'cleverbot/parser'
+require 'hashie'
 
 module Cleverbot
   # Ruby wrapper for Cleverbot.com.
@@ -55,9 +56,9 @@ module Cleverbot
     #
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
     # [<tt>params</tt>] Optional <tt>Hash</tt> with form parameters. Merged with DEFAULT_PARAMS. Defaults to <tt>{}</tt>.
-    def self.write message='', params={}
+    def self.write(message = '', params = {})
       client = self.new(params)
-      {:message => client.write(message)}.merge! client.params
+      Hashie::Mash.new(:message => client.write(message)).merge client.params
     end
 
     # Initializes a Client with given parameters.
@@ -65,8 +66,8 @@ module Cleverbot
     # ==== Parameters
     #
     # [<tt>params</tt>] Optional <tt>Hash</tt> holding the initial parameters. Defaults to <tt>{}</tt>.
-    def initialize params={}
-      @params = params
+    def initialize(params = {})
+      @params = Hashie::Mash.new(params)
       @cookies = {}
 
       set_cookies
@@ -77,18 +78,12 @@ module Cleverbot
     # ==== Parameters
     #
     # [<tt>message</tt>] Optional <tt>String</tt> holding the message to be sent. Defaults to <tt>''</tt>.
-    def write message=''
-      cookie_string = @cookies.map{|(k, v)| "#{k}=#{v}"}.join(";")
-
+    def write(message = '')
       body = DEFAULT_PARAMS.merge @params
       body['stimulus'] = message
       body['icognocheck'] = digest(HashConversions.to_params(body))
 
-      response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
-
-      set_cookies(response)
-
-      parsed_response = response.parsed_response
+      parsed_response = send_message_request(body)
 
       message = parsed_response['message']
       parsed_response.keep_if { |key, value| DEFAULT_PARAMS.keys.include? key }
@@ -98,6 +93,19 @@ module Cleverbot
     end
 
     private
+
+    # POST request helper
+    def send_message_request(body)
+      response = self.class.post(PATH, :body => body, headers: {'Cookie' => cookie_string})
+      set_cookies(response)
+
+      response.parsed_response
+    end
+
+    # Converts cookies to an HTTP header-ready string
+    def cookie_string
+      @cookies.map{|(k, v)| "#{k}=#{v}"}.join(";")
+    end
 
     # Gets cookies needed to interact with new Jabberwacky server.
     def set_cookies(response=nil)
@@ -113,27 +121,8 @@ module Cleverbot
     # ==== Parameters
     #
     # [<tt>body</tt>] <tt>String</tt> to be digested.
-    def digest body
+    def digest(body)
       Digest::MD5.hexdigest body[9...35]
-    end
-
-    # Changes keys in hash to symbols
-    def symbolize_keys hash
-      transform_keys(hash) { |k| k.to_sym }
-    end
-
-    # Changes keys in hash to strings
-    def stringify_keys hash
-      transform_keys(hash) { |k| k.to_s }
-    end
-
-    # General purpose hash key transformation factory
-    def transform_keys hash
-      transformed_hash = {}
-      hash.each_pair do |key, value|
-        transformed_hash[yield(key)] = value
-      end
-      transformed_hash
     end
   end
 end

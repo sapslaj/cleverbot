@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "2.0.6"
   s.summary = s.description
 
+  s.add_dependency "hashie"
   s.add_dependency "httparty", ["< 1.0", ">= 0.8.1"]
 
   s.add_development_dependency "bundler"

@@ -35,7 +35,7 @@ http_interactions:
       Server:
       - nginx/1.6.2 (Ubuntu)
       Date:
-      - Tue, 23 Jun 2015 16:23:31 GMT
+      - Wed, 24 Jun 2015 16:17:28 GMT
       Content-Type:
       - text/html
       Transfer-Encoding:
@@ -355,7 +355,7 @@ http_interactions:
         id=\"twitter-wjs\" async src=\"//platform.twitter.com/widgets.js\"></script>\n<script
         async src=\"//apis.google.com/js/plusone.js\"></script>\n</body>\n</html>\n\n\n\n"
     http_version: 
-  recorded_at: Tue, 23 Jun 2015 16:23:40 GMT
+  recorded_at: Wed, 24 Jun 2015 16:17:37 GMT
 - request:
     method: post
     uri: http://www.cleverbot.com/webservicemin
@@ -391,7 +391,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Jun 2015 16:37:54 GMT
+      - Wed, 24 Jun 2015 16:17:30 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Transfer-Encoding:
@@ -405,20 +405,21 @@ http_interactions:
       Mime-Version:
       - '1.0'
       Expires:
-      - Tue, 23 Jun 2015 16:38:02 GMT
+      - Wed, 24 Jun 2015 16:17:33 GMT
       Pragma:
       - no-cache
       Cache-Control:
       - no-cache;no-store
       Set-Cookie:
-      - XAI=VWH
-      - cleverbotfirstref2="*AKZEGWBURPHUBRKFXWWOAZARPAUAZKHWWZRAAQCACK"; Expires=""
-      - cleverbotref="*OYUZMCBERZVPHRUTSCWYOUGRZOPGZUVRCZBAOAXEIM"; Expires="Tue,
-        23 Jun 2015 17:38:00 GMT"
+      - XAI=WWD
+      - cleverbotfirstref2="*SCOUUSGYWTUKPCOXOKAXSPQWSAKOEOYSKEVASGSSRK"; Expires=""
+      - cleverbotref="*UEYEWUAOQJWURWEZYMUNUZSQICUQYEACMYLAUGCSTK"; Expires="Wed,
+        24 Jun 2015 17:17:31 GMT"
     body:
       encoding: UTF-8
-      string: "Have you been to the Moon?\rVWH02665292\rj2log-xCaEKrMRCJYAFAESQKUE-detail\r\r\r\r\r\r\rHave
-        you been to the Moon?\r\r+3000_cbfull\r\r\r\r\rHave you been to the Moon?\r\r\r\r\r\r\r"
+      string: "Is society suffering from a moral vacuum?\rWWD00816840\rj2log-eIlPAdYFOVGGWAWIZAYG-detail\r\r\r\r\r\r\rIs
+        society suffering from a moral vacuum?\r\r+3000_cbfull\r\r\r\r\rIs society
+        suffering from a moral vacuum?\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Tue, 23 Jun 2015 16:38:03 GMT
+  recorded_at: Wed, 24 Jun 2015 16:17:39 GMT
 recorded_with: VCR 2.9.3
