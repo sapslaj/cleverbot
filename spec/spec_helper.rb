@@ -1,8 +1,14 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
+
+if RUBY_PLATFORM == "java"
+  require 'simplecov'
+  SimpleCov.start
+else
+  require "codeclimate-test-reporter"
+  CodeClimate::TestReporter.start
+end
 
 require 'rspec'
 require 'vcr'
