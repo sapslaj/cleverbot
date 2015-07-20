@@ -1,8 +1,8 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'simplecov'
-SimpleCov.start
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 require 'rspec'
 require 'vcr'
@@ -14,6 +14,7 @@ Dir[File.join(File.dirname(__FILE__), 'support', '**', '*.rb')].each { |f| requi
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/cassettes'
   config.hook_into :webmock
+  config.ignore_hosts 'codeclimate.com'
 end
 
 RSpec.configure do |config|

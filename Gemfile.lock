@@ -10,6 +10,8 @@ GEM
   specs:
     addressable (2.3.8)
     builder (3.2.2)
+    codeclimate-test-reporter (0.4.7)
+      simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
@@ -93,11 +95,14 @@ PLATFORMS
 DEPENDENCIES
   bundler
   cleverbot!
+  codeclimate-test-reporter
   jeweler
   pry
   rake
   rdoc
   rspec
-  simplecov
   vcr
   webmock
+
+BUNDLED WITH
+   1.10.5
