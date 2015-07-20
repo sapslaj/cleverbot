@@ -4,6 +4,8 @@
 
 === This repo
 {<img src="https://secure.travis-ci.org/sapslaj/cleverbot.png" />}[http://travis-ci.org/sapslaj/cleverbot]
+{<img src="https://codeclimate.com/github/sapslaj/cleverbot/badges/gpa.svg" />}[https://codeclimate.com/github/sapslaj/cleverbot]
+{<img src="https://codeclimate.com/github/sapslaj/cleverbot/badges/coverage.svg" />}[https://codeclimate.com/github/sapslaj/cleverbot/coverage]
 
 Ruby wrapper for Cleverbot.
 
