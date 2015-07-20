@@ -14,6 +14,7 @@ Dir[File.join(File.dirname(__FILE__), 'support', '**', '*.rb')].each { |f| requi
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/cassettes'
   config.hook_into :webmock
+  config.ignore_hosts 'codeclimate.com'
 end
 
 RSpec.configure do |config|
