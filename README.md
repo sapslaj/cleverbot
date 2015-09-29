@@ -1,0 +1,56 @@
+# cleverbot
+### Source repo
+[![Source Repo CI](https://secure.travis-ci.org/benmanns/cleverbot.png)](http://travis-ci.org/benmanns/cleverbot)
+
+### This repo
+[![This Repo CI](https://secure.travis-ci.org/sapslaj/cleverbot.png)](http://travis-ci.org/sapslaj/cleverbot)
+[![Code Climate GPA](https://codeclimate.com/github/sapslaj/cleverbot/badges/gpa.svg)](https://codeclimate.com/github/sapslaj/cleverbot)
+[![Code Climate Coverage](https://codeclimate.com/github/sapslaj/cleverbot/badges/coverage.svg)](https://codeclimate.com/github/sapslaj/cleverbot/coverage)
+
+Ruby wrapper for Cleverbot.
+
+## Examples
+
+### Talk to Cleverbot with Cleverbot::Client.write
+
+```ruby
+@params = Cleverbot::Client.write 'Hi.'
+@params['message'] # => "How are you?"
+@params['sessionid'] # => "ABC01234567"
+
+@params.keep_if { |key, value| Cleverbot::Client::DEFAULT_PARAMS.keys.include? key }
+@params['message'] # => nil
+@params['sessionid'] # => "ABC01234567"
+
+@params = Cleverbot::Client.write 'Good, you?', @params
+@params['message'] # => "Good."
+@params['sessionid'] # => "ABC01234567"
+```
+
+### Talk to Cleverbot with Cleverbot::Client#write to manage parameters.
+
+```ruby
+@client = Cleverbot::Client.new
+@client.write 'Hi.' # => "How are you?"
+@client.write 'Good, you?' # => "Good."
+```
+
+## Contributing to cleverbot
+
+*   Check out the latest master to make sure the feature hasn't been
+    implemented or the bug hasn't been fixed yet
+*   Check out the issue tracker to make sure someone already hasn't requested
+    it and/or contributed it
+*   Fork the project
+*   Start a feature/bugfix branch
+*   Commit and push until you are happy with your contribution
+*   Make sure to add tests for it. This is important so I don't break it in a
+    future version unintentionally.
+*   Please try not to mess with the Rakefile, version, or history. If you want
+    to have your own version, or is otherwise necessary, that is fine, but
+    please isolate to its own commit so I can cherry-pick around it.
+
+
+## Copyright
+
+Copyright (c) 2011 Benjamin Manns. See LICENSE.txt for further details.
